@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - QuantX</title>
+
+    <!-- Using iOS system font stack instead of Orbitron -->
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #000; color: #fff; overflow-x: hidden; font-weight: 400; font-style: italic; }
+        h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+        a { color: #fff; text-decoration: none; }
+        a:hover { color: #fff; }
+
+        /* Header */
+        header { position: fixed; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; background: rgba(0, 0, 0, 0.7); z-index: 1000; }
+        .logo { font-size: 1.8rem; font-weight: 700; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 30px; }
+        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: #fff; }
+        @media (max-width: 768px) {
+            header { padding: 20px 20px; }
+            nav ul { display: none; position: absolute; top: 60px; right: 20px; flex-direction: column; background: rgba(0,0,0,0.8); border-radius: 5px; }
+            nav ul li { margin: 15px 0; }
+            .menu-toggle { display: block; position: absolute; top: 20px; right: 20px; }
+        }
+
+        /* About Page Specific */
+        .about-detailed .container { max-width: 1000px; margin: 0 auto; padding: 150px 20px 50px; }
+        .about-detailed h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .about-detailed p, .about-detailed li { font-size: 1.1rem; color: #ccc; margin-bottom: 15px; line-height: 1.6; }
+        .about-detailed ul { list-style: disc inside; margin-bottom: 30px; }
+        .example-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .example-card { background: #222; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 0 10px rgba(0,255,255,0.1); }
+        .example-card img { width: 100%; border-radius: 5px; margin-bottom: 15px; }
+        .example-card h3 { color: #fff; margin-bottom: 10px; }
+        .example-card p { color: #aaa; }
+        .btn { padding: 15px 30px; border: 2px solid #fff; color: #fff; border-radius: 5px; transition: all 0.3s; }
+        .btn:hover { background: #fff; color: #000; }
+
+        footer { padding: 30px 50px; text-align: center; background: #000; margin-top: 50px; }
+        .social a { margin: 0 10px; font-size: 1.5rem; color: #fff; }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+            toggle.addEventListener('click', () => { nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex'; });
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">QuantX</div>
+        <div class="menu-toggle">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#mission">Mission</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-detailed" id="about">
+        <div class="container">
+            <h1>About QuantX</h1>
+            <p>At QuantX, our driving vision is to engineer cost-effective, cutting-edge robotic solutions for every sector. We believe that automation shouldn't break the bank—instead, it should empower businesses of all sizes to innovate, optimize, and excel.</p>
+
+            <h2>Our Sectors</h2>
+            <ul>
+                <li><strong>Manufacturing:</strong> Precision assembly bots that streamline production lines and minimize downtime.</li>
+                <li><strong>Corporate:</strong> Office assistants capable of handling day-to-day tasks—from scheduling meetings to document delivery.</li>
+                <li><strong>Healthcare:</strong> Robotic aides that support clinical staff, perform disinfecting routines, and assist in patient logistics.</li>
+                <li><strong>Agriculture:</strong> Autonomous rovers designed for seeding, harvesting, and field monitoring.</li>
+                <li><strong>Logistics & Warehousing:</strong> Automated carriers and inventory scanners that optimize storage and retrieval processes.</li>
+            </ul>
+
+            <h2>Featured Examples</h2>
+            <div class="example-grid">
+                <div class="example-card">
+                    <img src="https://example.com/factoryfloor-x.jpg" alt="FactoryFloor-X">
+                    <h3>FactoryFloor-X</h3>
+                    <p>Installed at Acme Corp, this modular robot reduced assembly cycle time by 30%.</p>
+                </div>
+                <div class="example-card">
+                    <img src="https://example.com/officebot-pro.jpg" alt="OfficeBot-Pro">
+                    <h3>OfficeBot-Pro</h3>
+                    <p>In use at Globex HQ to automate mail delivery, meeting room setup, and receptionist duties.</p>
+                </div>
+                <div class="example-card">
+                    <img src="https://example.com/harvest-rover.jpg" alt="Harvest Rover">
+                    <h3>Harvest Rover</h3>
+                    <p>Deployed in GreenFields Farm for precision harvesting, increasing yield by 15%.</p>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 QuantX. All rights reserved.</p>
+        <div class="social">
+            <a href="#"><img src="https://example.com/icons/twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="https://example.com/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="#"><img src="https://example.com/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+</body>
+</html> 
